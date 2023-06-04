@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from app1.views import *
+from app4.views import *
 import app2,app3
 
 urlpatterns = [
@@ -28,5 +29,8 @@ urlpatterns = [
     path('app2/',include('app2.urls')),
     
     path('app3/',include('app3.urls')),
+    
+    path('gallery_string/',gallery_string,name='gallery_string'),
+    path('gallery/',gallery,name='gallery'),
     
 ]
